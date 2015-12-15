@@ -78,7 +78,7 @@ def generateDocument(username, password, locations, nodesPerLocation):
     return {
         "cassandra_config": {
             "phi_convict_threshold": 12,
-            "initial_token": 4611686018427387901,
+            "num_tokens": 64,
             "auto_bootstrap": False,
             "permissions_validity_in_ms": 2000,
             "memtable_allocation_type": "heap_buffers",
@@ -170,7 +170,7 @@ def generateDocument(username, password, locations, nodesPerLocation):
             "write_request_timeout_in_ms": 2000,
             "range_request_timeout_in_ms": 10000,
             "memtable_offheap_space_in_mb": 2048,
-            "cluster_name": "Test Cluster",
+            "cluster_name": "MFA Cluster",
             "server_encryption_options": {
                 "keystore_password": "cassandra",
                 "algorithm": "SunX509",
